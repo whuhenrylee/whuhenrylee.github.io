@@ -1,5 +1,5 @@
 # Panama Api
-Panama Api提供了微信广告对应的广告主、广告、主体、账户等信息的通用查询和修改功能  
+Panama Api提供了微信广告对应的广告主、广告、主体、账户等信息的通用查询功能  
 文档版本：v1
 
 
@@ -33,7 +33,7 @@ Panama Api提供了微信广告对应的广告主、广告、主体、账户等�
 1.广告主模块
 -----------
 ### 1.1 获取广告主信息 
-> 地址：v1/advertiser/detail
+> 地址：v1/advertiser/detail  
 > 方式：GET
 
 #### 请求参数
@@ -44,7 +44,7 @@ Panama Api提供了微信广告对应的广告主、广告、主体、账户等�
 |uid |int | 广告主uid | 是 |
 |uin |int | 公众号uid | 是 |
 |username |string | 公众号原始id | 是 |
-|fields |json(array of string),如果没有填写， | 需要获取的字段信息 | 否 |
+|fields |json(array of string)| 需要获取的字段信息,具体见字段补充说明| 否 |
 
 > 说明：appid/uid/uin/username 至少要填写一个
 
@@ -119,26 +119,19 @@ Panama Api提供了微信广告对应的广告主、广告、主体、账户等�
         	"change_time":151357996,
         	"change_field":"",
         	"before":"明天怎样穿",
-        	"after":"几今天怎样穿"
-        }],
-
-        "uname": "赵州桥责任有限公司",
-        "customer_status":'CUSTOMERSTATUS_NORMAL',
-        "address": "广东省深圳市南山区xxx路xxx号xxx",
-        "fund_status":"FUNDSTATUS_NORMAL",
-        "virfund_status":"FUNDSTATUS_NORMAL",
-        "day_budget": 1000
+        	"after":"今天怎样穿"
+        }]
     }
 }
 ```
 
 #### 接口示例
 
-> 地址1：[advertiser/detail?uid=1809895](advertiser/detail?uid=1809895)
+> 地址1：[advertiser/detail?uid=1809895](advertiser/detail?uid=1809895)  
 > 地址2：[advertiser/detail?appid=1809895](advertiser/detail?appid=wx4be5c665c12c76df)
 
 ### 1.2 广告主查询
-> 地址：v1/advertiser/list
+> 地址：v1/advertiser/list  
 > 方式：GET
 
 #### 请求参数
@@ -159,12 +152,8 @@ Panama Api提供了微信广告对应的广告主、广告、主体、账户等�
     	"uid":4549698,
     	"uin":3215012219
     }],
-    "publishers":[{
-    	"nickname":"我的一条",
-    	"appid":"wx099e8607f32ec176",
-    	"publisherid":4549698,
-    	"uin":3215012219
-    }]
+    "total":20,
+    "page":1
 }
 ```
 
@@ -174,7 +163,7 @@ Panama Api提供了微信广告对应的广告主、广告、主体、账户等�
 >待完成
 
 ### 2.2 流量主查询
-> 地址：v1/publisher/list
+> 地址：v1/publisher/list  
 > 方式：GET
 
 #### 请求参数
@@ -194,14 +183,22 @@ Panama Api提供了微信广告对应的广告主、广告、主体、账户等�
     	"appid":"wx099e8607f32ec176",
     	"publisherid":4549698,
     	"uin":3215012219
-    }]
+    }],
+    "total":20,
+    "page":1
 }
 ```
 
 3.主体模块
 -----------
+### 3.1 查询主体信息
+>待完成
+
 4.服务商模块
 -----------
+>待完成
+
 5.账户模块
 -----------
+>待完成
 
